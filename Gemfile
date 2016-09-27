@@ -58,3 +58,8 @@ end
 group :development do
   gem 'letter_opener_web'
 end
+
+gem 'therubyracer', platforms: :ruby
+gem 'rails_admin'
+
+gem 'cancan'
