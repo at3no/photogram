@@ -8,6 +8,7 @@
 <div class="row">
   <p>タイトル:<%= post.title %></p>
   <p>本文:<%= post.content %></p>
+  <p>ユーザID：<%= post.user_id %>&nbsp;ユーザ名：<%= post.user.name %></p>
   <p><%= image_tag post.image.thumb.url %></p>
   <%= link_to "投稿を編集する", edit_post_path(post.id), class: 'btn btn-default btn-sm btn-success' %>
   <br>
