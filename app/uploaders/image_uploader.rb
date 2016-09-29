@@ -17,7 +17,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def filename
-    "#{Time.now.strftime('%Y%m%d%H%M%S')}.jpg" if original_filename.present?
+    time = Time.now
+    name = time.strftime('%Y%m%d%H%M%S') + '.jpg'
+    name.downcase
   end
 
   # Include RMagick or MiniMagick support:
