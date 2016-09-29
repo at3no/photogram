@@ -10,9 +10,8 @@
   <p>本文:<%= post.content %></p>
   <p>投稿者：<%= post.user.name %></p>
   <p><%= image_tag post.image.thumb.url %></p>
-  <%= link_to "投稿を編集する", edit_post_path(post.id), class: 'btn btn-default btn-sm btn-success' %>
-  <br>
-  <%= link_to '投稿を削除する', post_path(post), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+  <p><%= link_to "投稿を編集する", edit_post_path(post.id), class: 'btn btn-default btn-sm btn-success' %></p>
+  <p><%= link_to '投稿を削除する', post_path(post), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %></p>
 </div>
 <% end %>
 </div>
