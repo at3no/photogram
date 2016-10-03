@@ -9,7 +9,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   process :convert => 'jpg'
 
   version :thumb do
-    process :resize_to_limit => [300, 300]
+    process :resize_to_limit => [500, 500]
   end
 
   def extension_white_list
@@ -19,7 +19,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   def filename
     super.chomp(File.extname(super)) + '.jpg' if original_filename.present?
   end
-  
+
   # def filename
     # time = Time.now
     # name = time.strftime('%Y%m%d%H%M%S') + '.jpg'
